@@ -1,0 +1,17 @@
+// The Word Guesser
+
+
+var lettersOfWord = ["F", "O", "X"];
+var guessedLetters = [];
+
+function guessedLetter(letter){
+    if (lettersOfWord.includes(letter) === true && guessedLetters.includes(letter) === false) {
+        guessedLetters.push(letter);
+        console.log("Congrats you've guessed a correct letter: " + letter);
+    } else if (guessedLetters.includes(letter) === true) {
+        console.log("You already guessed: " + letter);
+    } else {
+        console.log("The word does not include " + letter)
+    }
+    
+}
